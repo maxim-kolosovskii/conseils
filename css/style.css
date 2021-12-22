@@ -90,13 +90,16 @@ h6 {
 
 h1 {
   font-weight: 700; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1023px) {
     h1 {
       font-size: 2.188rem; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     h1 {
-      font-size: 2.5rem; } }
-  @media screen and (min-width: 992px) {
+      font-size: 2.4rem; } }
+  @media screen and (min-width: 1200px) {
+    h1 {
+      font-size: 2.7rem; } }
+  @media screen and (min-width: 1400px) {
     h1 {
       font-size: 3rem; } }
 
