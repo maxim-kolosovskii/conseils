@@ -39,8 +39,7 @@ General Landing styles
   background: url("../img/bg-top-min.jpg") no-repeat;
   background-size: cover;
   display: flex;
-  transition: all 0.15s ease-in-out;
-  display: none; }
+  transition: all 0.15s ease-in-out; }
   @media screen and (min-width: 768px) {
     .section--top {
       min-height: 70vh; } }
@@ -744,8 +743,7 @@ img.mfp-img {
 .section--comment {
   background-color: #f2f2f2;
   text-align: center;
-  transition: all 0.3s ease-in-out;
-  display: none; }
+  transition: all 0.3s ease-in-out; }
   @media screen and (max-width: 767px) {
     .section--comment {
       padding: 190px 0 6vh; } }
