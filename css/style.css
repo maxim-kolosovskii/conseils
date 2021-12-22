@@ -157,8 +157,7 @@ Header elements
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 10; }
+  right: 0; }
   @media screen and (max-width: 991px) {
     .header {
       padding: 0 var(--md); } }
@@ -169,8 +168,17 @@ Header elements
     /* font-family: $font-family-bold; */
     margin: 0 auto; }
   .header .logo {
-    max-width: 244px;
-    width: 100%; }
+    width: 100%;
+    transition: all 0.3s ease-in-out; }
+    @media screen and (max-width: 991px) {
+      .header .logo {
+        max-width: 244px; } }
+    @media screen and (min-width: 992px) {
+      .header .logo {
+        max-width: 380px; } }
+    @media screen and (min-width: 1400px) {
+      .header .logo {
+        max-width: 480px; } }
   .header span {
     display: none; }
 
@@ -314,8 +322,8 @@ Footer elements
     width: 100%; }
 
 /* Buttons */
-.btn,
-button {
+.section .btn,
+.section button {
   background-color: #2ca0ff;
   border: 0 none;
   border-radius: var(--xl);
@@ -333,44 +341,44 @@ button {
   white-space: nowrap;
   width: max-content; }
   @media screen and (max-width: 767px) {
-    .btn,
-    button {
+    .section .btn,
+    .section button {
       font-size: 0.75rem;
       padding: 10px 22px 11px; } }
   @media screen and (min-width: 768px) {
-    .btn,
-    button {
+    .section .btn,
+    .section button {
       padding: 18px 32px 19px 50px; } }
-  .btn:hover,
-  button:hover {
+  .section .btn:hover,
+  .section button:hover {
     background-color: #0088f8;
     border: 0 none;
     box-shadow: none;
     text-decoration: none; }
-  .btn:focus,
-  button:focus {
+  .section .btn:focus,
+  .section button:focus {
     outline: none; }
-  .btn:after,
-  button:after {
+  .section .btn:after,
+  .section button:after {
     content: '';
     background: url("../img/i-arrow-btn-min.svg") 0 50% no-repeat;
     background-size: 100%;
     display: inline-block; }
     @media screen and (max-width: 767px) {
-      .btn:after,
-      button:after {
+      .section .btn:after,
+      .section button:after {
         height: 10px;
         width: 11px;
         margin-left: 3px; } }
     @media screen and (min-width: 768px) {
-      .btn:after,
-      button:after {
+      .section .btn:after,
+      .section button:after {
         height: 16px;
         width: 17px;
         margin-left: 13px; } }
-  .btn.purple,
-  button.purple {
+  .section .btn.purple,
+  .section button.purple {
     background-color: #dc4dff; }
-    .btn.purple:hover,
-    button.purple:hover {
+    .section .btn.purple:hover,
+    .section button.purple:hover {
       background-color: #d21aff; }
