@@ -67,7 +67,7 @@ General Landing styles
     @media screen and (max-width: 767px) {
       .section--top h1 {
         font-size: 2.813rem;
-        line-height: 0.78;
+        line-height: 0.8;
         margin-bottom: 12vh; } }
     @media screen and (max-width: 374px) {
       .section--top h1 {
@@ -805,6 +805,9 @@ img.mfp-img {
 /* astuces section */
 .section--astuces {
   position: relative; }
+  @media screen and (max-width: 767px) {
+    .section--astuces {
+      padding-bottom: 25px; } }
   @media screen and (min-width: 768px) {
     .section--astuces {
       padding: 40px 0 6vh; }
@@ -899,6 +902,16 @@ img.mfp-img {
         .section--astuces ul li span {
           margin-right: 20px;
           width: 43px; } }
+  @media screen and (max-width: 767px) {
+    .section--astuces .mobile-only.smaller {
+      text-align: center;
+      font-size: 0.6rem;
+      margin: 80px auto 0;
+      max-width: 388px;
+      width: 90%; } }
+  @media screen and (min-width: 768px) {
+    .section--astuces .mobile-only {
+      display: none; } }
   .section--astuces .slider-outer {
     background: url("../img/bg-slider-min.jpg") center no-repeat #524722;
     background-size: cover;
@@ -941,17 +954,17 @@ img.mfp-img {
   .section--astuces .slider {
     background-color: rgba(7, 23, 51, 0.25);
     position: relative;
-    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
     height: 100%; }
     @media screen and (max-width: 767px) {
       .section--astuces .slider {
-        height: 380px; } }
+        height: 220px; } }
     @media screen and (min-width: 768px) {
       .section--astuces .slider {
         height: 450px;
-        max-width: 646px; } }
+        max-width: 646px;
+        overflow: hidden; } }
     @media screen and (min-width: 1400px) {
       .section--astuces .slider {
         height: 503px; } }
@@ -973,29 +986,43 @@ img.mfp-img {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    .section--astuces .slider_item p {
-      font-size: 1.3rem; }
-      .section--astuces .slider_item p.bigger span {
-        display: block;
-        font-family: "DM Serif Display", "Times New Roman", serif;
-        line-height: 1;
-        transition: all 0.3s ease-in-out; }
-        @media screen and (max-width: 767px) {
-          .section--astuces .slider_item p.bigger span {
-            font-size: 5.625rem; } }
-        @media screen and (min-width: 768px) {
-          .section--astuces .slider_item p.bigger span {
-            font-size: 7rem; } }
-        @media screen and (min-width: 1200px) {
-          .section--astuces .slider_item p.bigger span {
-            font-size: 9rem; } }
+    @media screen and (min-width: 768px) {
+      .section--astuces .slider_item p.bigger {
+        font-size: 1.3rem; }
+        .section--astuces .slider_item p.bigger span, .section--astuces .slider_item p.bigger img {
+          margin-bottom: 2vh; }
+        .section--astuces .slider_item p.bigger br {
+          display: none; } }
+    .section--astuces .slider_item p.bigger span {
+      display: block;
+      font-family: "DM Serif Display", "Times New Roman", serif;
+      line-height: 1;
+      transition: all 0.3s ease-in-out; }
       @media screen and (max-width: 767px) {
-        .section--astuces .slider_item p.bigger img {
-          max-height: 100px; } }
+        .section--astuces .slider_item p.bigger span {
+          font-size: 5.625rem; } }
+      @media screen and (min-width: 768px) {
+        .section--astuces .slider_item p.bigger span {
+          font-size: 7rem; } }
+      @media screen and (min-width: 1200px) {
+        .section--astuces .slider_item p.bigger span {
+          font-size: 9rem; } }
+    @media screen and (max-width: 767px) {
+      .section--astuces .slider_item p.bigger img {
+        max-height: 100px; } }
+    @media screen and (max-width: 991px) {
       .section--astuces .slider_item p.smaller {
-        font-size: 0.5rem;
+        font-size: 0.6rem; } }
+    @media screen and (max-width: 767px) {
+      .section--astuces .slider_item p.smaller {
+        display: none; } }
+    @media screen and (min-width: 768px) {
+      .section--astuces .slider_item p.smaller {
         max-width: 388px;
-        width: 90%; }
+        width: 90%; } }
+    @media screen and (min-width: 992px) {
+      .section--astuces .slider_item p.smaller {
+        font-size: 0.5rem; } }
     .section--astuces .slider_item img {
       display: block;
       margin: 0 auto; }
@@ -1004,31 +1031,54 @@ img.mfp-img {
       margin-bottom: 3vh; }
   .section--astuces .slider_control-outer {
     position: absolute;
-    bottom: 71px;
     z-index: 1;
     margin: auto;
     left: 0;
-    right: 0;
-    width: 280px; }
+    right: 0; }
+    @media screen and (max-width: 767px) {
+      .section--astuces .slider_control-outer {
+        bottom: -44px;
+        width: 210px; } }
+    @media screen and (min-width: 768px) {
+      .section--astuces .slider_control-outer {
+        bottom: 71px;
+        width: 280px; } }
   .section--astuces .slider_control {
-    border: 1px solid #fff;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
     transform: translateY(-50%);
     display: none;
     align-items: center;
     justify-content: center;
-    color: #fff;
     user-select: none;
     position: absolute;
     transition: all 0.3s ease-in-out; }
+    @media screen and (max-width: 767px) {
+      .section--astuces .slider_control {
+        border: 1px solid #071733;
+        color: #071733;
+        height: 37px;
+        width: 37px; } }
+    @media screen and (min-width: 768px) {
+      .section--astuces .slider_control {
+        border: 1px solid #fff;
+        color: #fff;
+        height: 60px;
+        width: 60px; } }
     .section--astuces .slider_control:focus, .section--astuces .slider_control:hover {
-      color: #fff;
       outline: 0;
       text-decoration: none; }
-    .section--astuces .slider_control:hover {
-      background-color: rgba(255, 255, 255, 0.2); }
+      @media screen and (max-width: 767px) {
+        .section--astuces .slider_control:focus, .section--astuces .slider_control:hover {
+          color: #071733; } }
+      @media screen and (min-width: 768px) {
+        .section--astuces .slider_control:focus, .section--astuces .slider_control:hover {
+          color: #fff; } }
+    @media screen and (max-width: 767px) {
+      .section--astuces .slider_control:hover {
+        background-color: rgba(7, 23, 51, 0.2); } }
+    @media screen and (min-width: 768px) {
+      .section--astuces .slider_control:hover {
+        background-color: rgba(255, 255, 255, 0.2); } }
   .section--astuces .slider_control-show {
     display: flex; }
   .section--astuces .slider_control-prev {
@@ -1037,26 +1087,35 @@ img.mfp-img {
     right: 0; }
   .section--astuces .slider_control::before {
     content: "";
-    background: url("../img/i-arrow-min.svg") 50% no-repeat;
     display: inline-block;
     width: 12px;
     height: 20px;
     margin-left: 2px; }
+    @media screen and (max-width: 767px) {
+      .section--astuces .slider_control::before {
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTEuNTk2IDEuODUzIDguMzAyIDguMzAzLTguMzAyIDguMzAzIiBzdHJva2U9IiMwNzE3MzMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+") 50% no-repeat; } }
+    @media screen and (min-width: 768px) {
+      .section--astuces .slider_control::before {
+        background: url("../img/i-arrow-min.svg") 50% no-repeat; } }
   .section--astuces .slider_control-prev::before {
     transform: rotate(-180deg); }
   .section--astuces .slider_indicators {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 65px;
     display: flex;
     justify-content: center;
     padding-left: 0;
     margin: 0 15%;
     list-style: none;
     user-select: none; }
+    @media screen and (max-width: 767px) {
+      .section--astuces .slider_indicators {
+        bottom: -50px; } }
+    @media screen and (min-width: 768px) {
+      .section--astuces .slider_indicators {
+        bottom: 65px; } }
   .section--astuces .slider_indicator {
-    border: 1px solid #fff;
     border-radius: 50%;
     cursor: pointer;
     flex: 0 1 auto;
@@ -1065,22 +1124,35 @@ img.mfp-img {
     margin-right: 5px;
     margin-left: 5px;
     background-clip: padding-box; }
-    .section--astuces .slider_indicator:hover {
-      background-color: rgba(255, 255, 255, 0.2); }
+    @media screen and (max-width: 767px) {
+      .section--astuces .slider_indicator {
+        border: 1px solid #071733; }
+        .section--astuces .slider_indicator:not(.slider_indicator-active):hover {
+          background-color: rgba(7, 23, 51, 0.2); } }
+    @media screen and (min-width: 768px) {
+      .section--astuces .slider_indicator {
+        border: 1px solid #fff; }
+        .section--astuces .slider_indicator:not(.slider_indicator-active):hover {
+          background-color: rgba(255, 255, 255, 0.2); } }
   .section--astuces .slider_indicator-active {
     border: none;
-    background-color: #fff;
     width: 12px;
     height: 12px; }
+    @media screen and (max-width: 767px) {
+      .section--astuces .slider_indicator-active {
+        background-color: #071733; } }
+    @media screen and (min-width: 768px) {
+      .section--astuces .slider_indicator-active {
+        background-color: #fff; } }
 
 /* Ebay section */
 .section--ebay {
   background: url("../img/bg-ebay-min.jpg") 50% no-repeat;
   background-size: cover;
   color: #fff;
-  padding: 12vh 0 6vh;
   position: relative;
   text-align: center;
+  transition: all 0.3s ease-in-out;
   /*!
   * chiefSlider
   *   github: https://github.com/itchief/ui-components
@@ -1088,19 +1160,39 @@ img.mfp-img {
   * Copyright 2018-2021 Alexander Maltsev
   * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
   */ }
-  .section--ebay h1 {
-    max-width: 1050px;
-    margin: auto; }
   @media screen and (max-width: 767px) {
+    .section--ebay {
+      padding: 6vh 0 6vh; } }
+  @media screen and (min-width: 768px) {
+    .section--ebay {
+      padding: 12vh 0 6vh; } }
+  .section--ebay h1 {
+    margin: auto;
+    transition: all 0.3s ease-in-out; }
+    @media screen and (max-width: 1199px) {
+      .section--ebay h1 {
+        font-size: 2rem;
+        line-height: 0.9; }
+        .section--ebay h1 br {
+          display: none; } }
+    @media screen and (min-width: 768px) {
+      .section--ebay h1 {
+        max-width: 80%; } }
+    @media screen and (min-width: 1200px) {
+      .section--ebay h1 {
+        max-width: 1050px; } }
+  @media screen and (max-width: 575px) {
     .section--ebay .btn {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 180px;
-      z-index: 1; } }
+      margin: -180px auto 140px; } }
   .section--ebay .slider-chief {
-    position: relative;
-    margin: 8vh 0 4vh; }
+    position: relative; }
+    @media screen and (max-width: 575px) {
+      .section--ebay .slider-chief {
+        margin: 5vh auto 4vh; } }
+    @media screen and (min-width: 576px) {
+      .section--ebay .slider-chief {
+        margin: 8vh auto 4vh;
+        width: calc(100% - 15px); } }
   .section--ebay .slider__container {
     overflow: hidden; }
   .section--ebay .slider__items {
