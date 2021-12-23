@@ -1159,6 +1159,10 @@ img.mfp-img {
     position: absolute;
     transform: translateY(-50%);
     transition: all 0.3s ease-in-out; }
+    .section--ebay .slider__control[data-slide="chief-prev"] {
+      left: -30px; }
+    .section--ebay .slider__control[data-slide="chief-next"] {
+      right: -30px; }
     @media screen and (max-width: 575px) {
       .section--ebay .slider__control {
         height: 37px;
@@ -1167,11 +1171,7 @@ img.mfp-img {
       .section--ebay .slider__control {
         height: 60px;
         width: 60px;
-        top: 40%; }
-        .section--ebay .slider__control[data-slide="chief-prev"] {
-          left: -30px; }
-        .section--ebay .slider__control[data-slide="chief-next"] {
-          right: -30px; } }
+        top: 40%; } }
     .section--ebay .slider__control:focus, .section--ebay .slider__control:hover {
       color: #fff;
       outline: 0;
