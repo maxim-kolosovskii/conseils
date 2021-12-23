@@ -987,12 +987,11 @@ img.mfp-img {
     align-items: center;
     justify-content: center; }
     @media screen and (max-width: 767px) {
+      .section--astuces .slider_item p.bigger span, .section--astuces .slider_item p.bigger img {
+        margin-bottom: 2vh; } }
+    @media screen and (min-width: 768px) {
       .section--astuces .slider_item p.bigger {
-        font-size: 1.3rem; }
-        .section--astuces .slider_item p.bigger span, .section--astuces .slider_item p.bigger img {
-          margin-bottom: 2vh; }
-        .section--astuces .slider_item p.bigger br {
-          display: none; } }
+        font-size: 1.3rem; } }
     .section--astuces .slider_item p.bigger span {
       display: block;
       font-family: "DM Serif Display", "Times New Roman", serif;
