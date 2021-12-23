@@ -1079,6 +1079,7 @@ img.mfp-img {
   background-size: cover;
   color: #fff;
   padding: 12vh 0 6vh;
+  position: relative;
   text-align: center;
   /*!
   * chiefSlider
@@ -1090,6 +1091,13 @@ img.mfp-img {
   .section--ebay h1 {
     max-width: 1050px;
     margin: auto; }
+  @media screen and (max-width: 767px) {
+    .section--ebay .btn {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 180px;
+      z-index: 1; } }
   .section--ebay .slider-chief {
     position: relative;
     margin: 8vh 0 4vh; }
@@ -1149,7 +1157,7 @@ img.mfp-img {
       bottom: -24px;
       left: 0;
       right: 0;
-      z-index: 1;
+      z-index: 16;
       width: 240px; } }
   .section--ebay .slider__control {
     border: 1px solid #071733;
