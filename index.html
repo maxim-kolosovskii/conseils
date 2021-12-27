@@ -22,7 +22,7 @@
 </header>
 
 <main class="main">
-    <section class="section section--top">
+    <section class="section section--top lazy">
         <div class="container content-box">
             <div class="content-left">
                 <h1>La revente <br>de cadeaux <br>de Noël</h1>
@@ -58,30 +58,19 @@
             </div>
         </div>
 
-<!--        <a class="popup-video" href="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.mp4"><span>Voir la vidéo</span></a>-->
-<!--        <a class="popup-video" href="https://www.youtube.com/watch?v=NzeFVbqAG2c?autoplay=1"><span>Voir la vidéo</span></a>-->
-        <a class="popup-video" id="btnPlay" href="#video"><span>Voir la vidéo</span></a>
+        <a class="popup-video" id="btnPlay"><span>Voir la vidéo</span></a>
 
     </section><!-- end top section -->
 
-    <section class="section section--video" id="video">
+    <section class="section section--video">
         <div class="container" id="myContainer">
-            <!--            <video id="fon" autoplay muted loop playsinline>-->
-            <!--            <video id="fon" autoplay loop playsinline>-->
-<!--                        <video id="fon">-->
-<!--                            <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.webm" type="video/webm">-->
-<!--                            <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.mp4" type="video/mp4">-->
-<!--                        </video>-->
-
-<!--            <video id="myPlayer" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"></video>-->
-            <video id="myPlayer" loop>
+            <video id="myPlayer" class="lazy-v" preload="auto" loop playsinline  poster="./img/bg-video2-min.jpg">
                 <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.webm" type="video/webm">
                 <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.mp4" type="video/mp4">
             </video>
             <div class="controls">
-                <button class="btnfull" id="btnFull"><span>Fullscreen</span></button>
-<!--                <button id="btnPlay">play</button>-->
                 <button class="btnpause" id="btnPause"><span>Pause</span></button>
+                <button class="btnfull" id="btnFull"><span>Fullscreen</span></button>
             </div>
         </div>
     </section><!-- end video section -->
@@ -192,7 +181,7 @@
         </div>
     </section><!-- end astuces section -->
 
-    <section class="section section--ebay">
+    <section class="section section--ebay lazy">
         <div class="container">
             <h1>Les utilisateurs eBay et les célébrités <br>vendent pour la bonne <span class="nowrap">cause !</span></h1>
             <p>Découvrez les objets & les enchères des célébrités à partir du 28 décembre* !</p>
@@ -353,39 +342,10 @@
 
 <!-- Video Popup -->
 <script defer src="js/video.js"></script>
-<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
-<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>-->
-
-<!--<script-->
-<!--        src="https://code.jquery.com/jquery-3.6.0.slim.min.js"-->
-<!--        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="-->
-<!--        crossorigin="anonymous">-->
-<!--</script>-->
-
-<script>
-    const q = selector => document.querySelector(selector),
-        on = 'addEventListener'
-
-    const fullscreen = ()=> {
-        var elem = q('#myContainer')
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) {
-            elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) {
-            elem.webkitRequestFullscreen();
-        }
-    }
-
-    q('#btnFull')[on]('click', fullscreen)
-    q('#btnPlay')[on]('click', ()=>myPlayer.play())
-    q('#btnPause')[on]('click', ()=>myPlayer.pause())
-</script>
 
 
-
-
+<!-- Background Images Lazy Loading -->
+<script defer src="js/lazy.js"></script>
 
 
 <!-- Top Slider -->
@@ -400,6 +360,7 @@
         });
     });
 </script>
+
 
 <!-- Bottom Slider -->
 <script defer src="js/chief-slider.js"></script>
