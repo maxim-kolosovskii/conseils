@@ -861,11 +861,11 @@ General Landing styles
 
 /* Ebay section */
 .section--ebay.lazy {
-  background-color: #adb0b3;
+  background-color: #131c2b;
   background-image: none; }
 
 .section--ebay {
-  background: url("../img/bg-ebay-min.jpg") #adb0b3 50% no-repeat;
+  background: url("../img/bg-ebay-min.jpg") #131c2b 50% no-repeat;
   background-size: cover;
   color: #fff;
   position: relative;
