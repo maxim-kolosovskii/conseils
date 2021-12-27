@@ -627,8 +627,11 @@ General Landing styles
   @media screen and (min-width: 768px) {
     .section--astuces .mobile-only {
       display: none; } }
+  .section--astuces .slider-outer.lazy {
+    background-color: #494225;
+    background-image: none; }
   .section--astuces .slider-outer {
-    background: url("../img/bg-slider-min.jpg") center no-repeat #524722;
+    background: url("../img/bg-slider-min.jpg") center no-repeat #494225;
     background-size: cover;
     color: #fff;
     text-align: center; }
