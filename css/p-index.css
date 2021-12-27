@@ -35,10 +35,10 @@ General Landing styles
 
 /* Top section */
 .section--top.lazy {
+  background-color: #614f49;
   background-image: none; }
 
 .section--top {
-  background-color: #614f49;
   background: url("../img/bg-top-min.jpg") 50% no-repeat;
   background-size: cover;
   display: flex;
@@ -861,6 +861,7 @@ General Landing styles
 
 /* Ebay section */
 .section--ebay.lazy {
+  background-color: #adb0b3;
   background-image: none; }
 
 .section--ebay {
