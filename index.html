@@ -58,10 +58,33 @@
             </div>
         </div>
 
-        <a class="popup-video" href="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.mp4"><span>Voir la vidéo</span></a>
+<!--        <a class="popup-video" href="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.mp4"><span>Voir la vidéo</span></a>-->
 <!--        <a class="popup-video" href="https://www.youtube.com/watch?v=NzeFVbqAG2c?autoplay=1"><span>Voir la vidéo</span></a>-->
+        <a class="popup-video" id="btnPlay" href="#video"><span>Voir la vidéo</span></a>
 
     </section><!-- end top section -->
+
+    <section class="section section--video" id="video">
+        <div class="container" id="myContainer">
+            <!--            <video id="fon" autoplay muted loop playsinline>-->
+            <!--            <video id="fon" autoplay loop playsinline>-->
+<!--                        <video id="fon">-->
+<!--                            <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.webm" type="video/webm">-->
+<!--                            <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.mp4" type="video/mp4">-->
+<!--                        </video>-->
+
+<!--            <video id="myPlayer" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"></video>-->
+            <video id="myPlayer" loop>
+                <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.webm" type="video/webm">
+                <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.mp4" type="video/mp4">
+            </video>
+            <div class="controls">
+                <button class="btnfull" id="btnFull"><span>Fullscreen</span></button>
+<!--                <button id="btnPlay">play</button>-->
+                <button class="btnpause" id="btnPause"><span>Pause</span></button>
+            </div>
+        </div>
+    </section><!-- end video section -->
 
     <section class="section section--comment">
         <div class="container">
@@ -330,9 +353,40 @@
 
 <!-- Video Popup -->
 <script defer src="js/video.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>-->
+
+<!--<script-->
+<!--        src="https://code.jquery.com/jquery-3.6.0.slim.min.js"-->
+<!--        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="-->
+<!--        crossorigin="anonymous">-->
+<!--</script>-->
+
+<script>
+    const q = selector => document.querySelector(selector),
+        on = 'addEventListener'
+
+    const fullscreen = ()=> {
+        var elem = q('#myContainer')
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        }
+    }
+
+    q('#btnFull')[on]('click', fullscreen)
+    q('#btnPlay')[on]('click', ()=>myPlayer.play())
+    q('#btnPause')[on]('click', ()=>myPlayer.pause())
+</script>
+
+
+
+
+
 
 <!-- Top Slider -->
 <script defer src="js/simple-adaptive-slider.js"></script>
