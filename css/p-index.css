@@ -39,7 +39,7 @@ General Landing styles
   background-image: none; }
 
 .section--top {
-  background: url("../img/bg-top-min.jpg") 50% no-repeat;
+  background: url("../img/bg-top-min.jpg") #614f49 50% no-repeat;
   background-size: cover;
   display: flex;
   transition: all 0.15s ease-in-out; }
@@ -865,7 +865,7 @@ General Landing styles
   background-image: none; }
 
 .section--ebay {
-  background: url("../img/bg-ebay-min.jpg") 50% no-repeat;
+  background: url("../img/bg-ebay-min.jpg") #adb0b3 50% no-repeat;
   background-size: cover;
   color: #fff;
   position: relative;
