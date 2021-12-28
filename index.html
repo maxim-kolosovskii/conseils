@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/p-index.css" />
 </head>
 
-<body class="body page">
+<body class="body page" id="videoManagement">
 
 <header class="header">
     <span>Conseils Conso</span>
@@ -62,16 +62,15 @@
 
     </section><!-- end top section -->
 
-    <section class="section section--video">
-        <div class="container" id="myContainer">
-            <video id="myPlayer" class="lazy-v" preload="auto" loop playsinline  poster="./img/bg-video2-min.jpg">
-                <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.webm" type="video/webm">
-                <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.mp4" type="video/mp4">
-            </video>
-            <div class="controls">
-                <button class="btnpause" id="btnPause"><span>Pause</span></button>
-                <button class="btnfull" id="btnFull"><span>Fullscreen</span></button>
-            </div>
+    <section class="section section--video" id="myContainer">
+        <video id="myPlayer" class="lazy-v" preload="auto" playsinline  poster="./img/bg-video2-min.jpg"  onended="theEnd()">
+            <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.webm" type="video/webm">
+            <source src="./video/CKDBxeBay_1920x1080_30sec_v7_compressed.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button class="btnpause" id="btnPause"><span>Pause</span></button>
+            <button class="btnclose" id="btnClose"><span>Close</span></button>
+<!--            <button class="btnfull" id="btnFull"><span>Fullscreen</span></button>-->
         </div>
     </section><!-- end video section -->
 

@@ -6,7 +6,6 @@ const fullscreen = ()=> {
     var elem = q('#myContainer')
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
-        // console.log(fullscreen);
     } else if (elem.mozRequestFullScreen) {
         elem.mozRequestFullScreen();
     } else if (elem.webkitRequestFullscreen) {
@@ -24,15 +23,26 @@ document.addEventListener('fullscreenchange', (event) => {
 // Buttons behavior
 function onPlay() {
     myPlayer.classList.add("playing");
-    myPlayer.scrollIntoView({ behavior: 'smooth', block: 'start'});
+    // myPlayer.scrollIntoView({ behavior: 'smooth', block: 'start'});
     myPlayer.play();
+    videoManagement.classList.add("management-on");
 }
 function onPause() {
     myPlayer.classList.remove("playing");
     myPlayer.pause();
 }
-q('#btnFull')[on]('click', fullscreen)
+function onClose() {
+    myPlayer.classList.remove("playing");
+    videoManagement.classList.remove("management-on");
+    myPlayer.pause();
+}
+function theEnd(){
+    // console.log("The End.")
+    videoManagement.classList.remove("management-on");
+}
+// q('#btnFull')[on]('click', fullscreen)
 q('#btnPlay')[on]('click', onPlay)
+q('#btnClose')[on]('click', onClose)
 q('#btnPause')[on]('click', ()=> {
     // console.log(myPlayer);
     if (myPlayer.paused) {
@@ -41,3 +51,4 @@ q('#btnPause')[on]('click', ()=> {
         onPause();
     }
 })
+

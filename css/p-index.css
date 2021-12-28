@@ -63,25 +63,25 @@ General Landing styles
   @media screen and (min-width: 1200px) {
     .section--top .content-left {
       margin-bottom: 10vh; } }
-  .section--top h1 {
+  .section--top .content-left h1 {
     color: #fff;
     letter-spacing: -.9px;
     transition: all 0.3s ease-in-out; }
     @media screen and (max-width: 767px) {
-      .section--top h1 {
+      .section--top .content-left h1 {
         font-size: 2.813rem;
         line-height: 0.8;
         margin-bottom: 12vh; } }
     @media screen and (max-width: 374px) {
-      .section--top h1 {
+      .section--top .content-left h1 {
         font-size: 2rem; } }
     @media screen and (min-width: 768px) {
-      .section--top h1 {
+      .section--top .content-left h1 {
         font-size: 3.5rem;
         line-height: 0.8;
         margin-bottom: 3vh; } }
     @media screen and (min-width: 1200px) {
-      .section--top h1 {
+      .section--top .content-left h1 {
         font-size: 4.5rem;
         line-height: 0.85;
         margin-bottom: 3vh; } }
@@ -302,7 +302,7 @@ General Landing styles
     opacity: 0;
     animation: scaleOut 0.5s ease-in-out;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: .5s;
     transition: background-color 0.3s ease-in-out; }
     @media screen and (max-width: 991px) {
       .section--top .popup-video {
@@ -358,122 +358,117 @@ General Landing styles
     opacity: 1;
     transform: scale(1); } }
 /* Video section */
-@media screen and (max-width: 767px) {
-  .section--video {
-    padding: 170px 0 0; } }
-@media screen and (min-width: 768px) {
-  .section--video {
-    padding: 12vh 0 6vh; } }
-.section--video .container {
-  display: flex;
-  position: relative; }
-  @media screen and (max-width: 767px) {
-    .section--video .container {
-      max-width: 100%;
-      padding: 0; } }
-.section--video video {
-  max-width: 100%; }
-.section--video .controls button {
-  background-color: transparent;
-  padding: 0;
-  position: absolute; }
-  .section--video .controls button:after {
-    content: none; }
-.section--video .controls span {
-  display: none; }
-.section--video .controls .btnpause {
-  border-radius: 0;
-  margin: 0;
+.management-on {
+  overflow: hidden; }
+  .management-on .section--video {
+    display: flex; }
+
+.section--video {
+  background-color: #000;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1;
-  width: 100%; }
-  .section--video .controls .btnpause:before {
-    content: '';
-    background-color: rgba(44, 160, 255, 0.2);
-    border-radius: 50%;
+  display: none; }
+  .section--video video {
     margin: auto;
-    position: absolute;
+    max-width: 100%; }
+  .section--video .controls button {
+    background-color: transparent;
+    padding: 0;
+    position: absolute; }
+    .section--video .controls button:after {
+      content: none; }
+  .section--video .controls span {
+    display: none; }
+  .section--video .controls .btnclose {
+    background: url("../img/i-close-min.svg") 50% no-repeat;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-size: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+    transition: all 0.3s ease-in-out; }
+    .section--video .controls .btnclose:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      border: 1px solid #fff !important; }
+  .section--video .controls .btnpause {
+    border-radius: 0;
+    margin: 0;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out; }
-    @media screen and (max-width: 991px) {
-      .section--video .controls .btnpause:before {
-        height: 66px;
-        width: 66px; } }
-    @media screen and (min-width: 992px) {
-      .section--video .controls .btnpause:before {
-        height: 100px;
-        width: 100px; } }
-    @media screen and (min-width: 1200px) {
-      .section--video .controls .btnpause:before {
-        height: 136px;
-        width: 136px; } }
-  .section--video .controls .btnpause:after {
-    content: '';
-    margin: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    left: 10px;
-    width: 0;
-    height: 0; }
-    @media screen and (max-width: 991px) {
-      .section--video .controls .btnpause:after {
-        border-top: 10px solid transparent;
-        border-left: 20px solid #fff;
-        border-bottom: 10px solid transparent; } }
-    @media screen and (min-width: 992px) {
-      .section--video .controls .btnpause:after {
-        border-top: 20px solid transparent;
-        border-left: 40px solid #fff;
-        border-bottom: 20px solid transparent; } }
-  .section--video .controls .btnpause:hover:before {
-    opacity: 1; }
-  .section--video .controls .btnpause:hover:after {
-    opacity: .5; }
-.section--video .playing + .controls .btnpause:after {
-  border: 0 none;
-  background: url("../img/i-pause-min.svg") 50% no-repeat;
-  left: 0; }
-  @media screen and (max-width: 767px) {
-    .section--video .playing + .controls .btnpause:after {
-      height: 20px;
-      width: 20px; } }
-  @media screen and (min-width: 768px) {
-    .section--video .playing + .controls .btnpause:after {
-      height: 40px;
-      width: 40px; } }
-.section--video .btnfull {
-  background: url("../img/i-fullscreen-min.svg") 50% no-repeat;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  right: 10px;
-  z-index: 2;
-  opacity: 0;
-  transition: all 0.3s ease-in-out; }
-  .section--video .btnfull:hover {
-    border: 1px solid #fff !important; }
-  @media screen and (max-width: 991px) {
-    .section--video .btnfull {
-      bottom: 11px; } }
-  @media screen and (min-width: 992px) {
-    .section--video .btnfull {
-      bottom: 25px; } }
-.section--video .container:hover .btnfull {
-  opacity: 1; }
-.section--video .fullscreen ~ .controls .btnfull {
-  display: none; }
+    z-index: 1;
+    width: 100%; }
+    .section--video .controls .btnpause:before {
+      content: '';
+      background-color: rgba(44, 160, 255, 0.1);
+      border-radius: 50%;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out; }
+      @media screen and (max-width: 991px) {
+        .section--video .controls .btnpause:before {
+          height: 66px;
+          width: 66px; } }
+      @media screen and (min-width: 992px) {
+        .section--video .controls .btnpause:before {
+          height: 100px;
+          width: 100px; } }
+      @media screen and (min-width: 1200px) {
+        .section--video .controls .btnpause:before {
+          height: 136px;
+          width: 136px; } }
+    .section--video .controls .btnpause:after {
+      content: '';
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 10px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out; }
+      @media screen and (max-width: 991px) {
+        .section--video .controls .btnpause:after {
+          border-top: 10px solid transparent;
+          border-left: 20px solid #fff;
+          border-bottom: 10px solid transparent; } }
+      @media screen and (min-width: 992px) {
+        .section--video .controls .btnpause:after {
+          border-top: 20px solid transparent;
+          border-left: 40px solid #fff;
+          border-bottom: 20px solid transparent; } }
+    .section--video .controls .btnpause:hover:before {
+      opacity: 1; }
+    .section--video .controls .btnpause:hover:after {
+      opacity: .3; }
+  .section--video .playing + .controls .btnpause:after {
+    border: 0 none;
+    background: url("../img/i-pause-min.svg") 50% no-repeat;
+    left: 0; }
+    @media screen and (max-width: 767px) {
+      .section--video .playing + .controls .btnpause:after {
+        height: 20px;
+        width: 20px; } }
+    @media screen and (min-width: 768px) {
+      .section--video .playing + .controls .btnpause:after {
+        height: 40px;
+        width: 40px; } }
 
 /* Comment section */
 .section--comment {
@@ -482,10 +477,10 @@ General Landing styles
   transition: all 0.3s ease-in-out; }
   @media screen and (max-width: 767px) {
     .section--comment {
-      padding: 6vh 0; } }
+      padding: 190px 0 6vh; } }
   @media screen and (min-width: 768px) {
     .section--comment {
-      padding: 6vh 0; } }
+      padding: 12vh 0 6vh; } }
   .section--comment h1 {
     color: #103a77;
     line-height: 1;

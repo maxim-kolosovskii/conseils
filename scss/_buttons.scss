@@ -2,7 +2,6 @@
 Buttons
 */
 
-//input[type=submit],
 .section .btn,
 .section button {
   background-color: $color-blue-light;
@@ -31,7 +30,6 @@ Buttons
   }
 
   &:hover {
-    //background-color: lighten($color-blue,10%);
     background-color: darken($color-blue-light,10%);
     border: 0 none;
     box-shadow: none;
@@ -45,7 +43,6 @@ Buttons
   &:after {
     content: '';
     background: url("../img/i-arrow-btn-min.svg") 0 50% no-repeat;
-    //background-size: auto;
     background-size: 100%;
     display: inline-block;
 

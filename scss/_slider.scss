@@ -10,7 +10,6 @@
 
   @include media-phablet-mx {
     margin-top: 4vh;
-  //  height: 380px;
   }
   @include media-phablet-mn {
     height: 600px;
@@ -58,7 +57,6 @@
   height: 100%;
 
   @include media-phablet-mx {
-    //height: 380px;
     height: 220px;
   }
   @include media-phablet-mn {
@@ -73,7 +71,6 @@
 .slider_wrapper {
   position: relative;
   overflow: hidden;
-  //height: 100%;
 }
 .slider_items {
   display: flex;
