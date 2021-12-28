@@ -1,0 +1,71 @@
+/*
+Buttons
+*/
+
+//input[type=submit],
+.section .btn,
+.section button {
+  background-color: $color-blue-light;
+  border: 0 none;
+  border-radius: var(--xl);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: $font-family-base-cond;
+  outline: none;
+  margin: 0 auto;
+  position: relative;
+  text-transform: uppercase;
+  transition: all $transition-duration $transition-timing-function;
+  white-space: nowrap;
+  width: max-content;
+
+  @include media-phablet-mx {
+    font-size: 0.75rem;
+    padding: 10px 22px 11px;
+  }
+  @include media-phablet-mn {
+    padding: 18px 32px 19px 50px;
+  }
+
+  &:hover {
+    //background-color: lighten($color-blue,10%);
+    background-color: darken($color-blue-light,10%);
+    border: 0 none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:after {
+    content: '';
+    background: url("../img/i-arrow-btn-min.svg") 0 50% no-repeat;
+    //background-size: auto;
+    background-size: 100%;
+    display: inline-block;
+
+    @include media-phablet-mx {
+      height: 10px;
+      width: 11px;
+      margin-left: 3px;
+    }
+    @include media-phablet-mn {
+      height: 16px;
+      width: 17px;
+      margin-left: 13px;
+    }
+  }
+
+  &.purple {
+    background-color: $color-purple;
+
+    &:hover {
+      background-color: darken($color-purple,10%);
+    }
+  }
+}

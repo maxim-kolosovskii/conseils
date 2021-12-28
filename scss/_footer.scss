@@ -1,0 +1,23 @@
+/*
+Footer elements
+*/
+
+.footer {
+  background-color: $color-blue-dark;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  transition: all $transition-duration $transition-timing-function;
+
+  @include media-tablet-v-mx {
+    padding: 4vh var(--md) 0;
+  }
+  @include media-tablet-v-mn {
+    padding: 4vh var(--md) 2vh;
+  }
+
+  .logo {
+    max-width: 300px;
+    width: 100%;
+  }
+}

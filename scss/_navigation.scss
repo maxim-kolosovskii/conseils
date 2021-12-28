@@ -1,0 +1,83 @@
+/* Navigation Block */
+.navigation {
+  margin: 3vh 0 0;
+
+  ol {
+    display: flex;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: end;
+    }
+  }
+
+  .title {
+    display: none;
+  }
+
+  .page {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $font-weight-bold;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+
+    &.current {
+      //background-color: $color-primary-brown;
+      border: 0 none;
+      box-sizing: border-box;
+      color: #fff;
+    }
+  }
+
+  //.wp-paginate a {
+  //  background-color: lighten($color-grey,75%);
+  //  border: 0 none;
+  //  box-sizing: border-box;
+  //  color: lighten($color-grey,35%);
+  //  transition: all $transition-duration $transition-timing-function;
+  //
+  //  &:hover {
+  //    background-color: $color-secondary-blue;
+  //    color: #fff;
+  //  }
+  //
+  //  &.prev,
+  //  &.next {
+  //    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMS41IDExLjUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiM3ZjdmN2Y7fQ0KPC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNNS40IDlDNS42IDkuMSA1LjkgOS4xIDYgOWw1LjItNS4yYzAuMi0wLjEgMC4yLTAuNCAwLTAuNmwtMC43LTAuN2MtMC4xLTAuMi0wLjQtMC4yLTAuNiAwTDUuOCA2LjcgMS41IDIuNWMtMC4yLTAuMi0wLjQtMC4yLTAuNiAwTDAuMiAzLjJjLTAuMiAwLjItMC4yIDAuNSAwIDAuNkw1LjQgOXoiLz48L3N2Zz4=");
+  //    background-position: center;
+  //    background-repeat: no-repeat;
+  //    background-size: 12px;
+  //    border-radius: 5px;
+  //    height: 30px;
+  //    width: 30px;
+  //    overflow: hidden;
+  //    text-indent: -10000px;
+  //    transform: rotate(-90deg);
+  //
+  //    &:hover {
+  //      background-image: url('../img/i-arrow.svg');
+  //    }
+  //  }
+  //
+  //  &.prev {
+  //    margin-right: 5px;
+  //    transform: rotate(90deg);
+  //  }
+  //
+  //  &.next {
+  //    transform: rotate(-90deg);
+  //  }
+  //}
+
+  //.gap {
+  //  color: lighten($color-grey,35%);
+  //  font-weight: $font-weight-base;
+  //  height: 30px;
+  //  margin-right: 5px;
+  //}
+}

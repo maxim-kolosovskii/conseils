@@ -1,0 +1,190 @@
+// VARIABLES
+
+// CSS animations
+$transition-duration: 0.3s;
+$transition-duration-fast: 0.15s;
+$transition-duration-slow: 0.6s;
+$transition-timing-function: ease-in-out;
+
+// CSS colors
+$color-purple: #dc4dff;
+$color-blue: #103a77;
+$color-blue-dark: #071733;
+$color-blue-light: #2ca0ff;
+$color-grey-light: #f2f2f2;
+$color-grey: #384048;
+
+// delete
+$color-black: #000;
+$color-red: #EC7272;
+$color-green: #8CAB35;
+
+// CSS typography
+$font-family-base: 'Cabin', 'Roboto', sans-serif;
+$font-family-base-cond: 'Cabin Condensed', 'Roboto', sans-serif;
+$font-family-accent: 'DM Serif Display', 'Times New Roman', serif;
+//$font-size-base: 20px;
+$font-weight-base: 400;
+$font-weight-bolder: 700;
+$font-color-base: $color-grey;
+
+// CSS header height
+//$header-mobile: 80px;
+//$header-desktop: 140px;
+
+// CSS media queries grid
+$media-small-max: 374px;
+$media-small-min: 375px;
+$media-phone-max: 575px;
+$media-phone-min: 576px;
+$media-phablet-max: 767px;
+$media-phablet-min: 768px;
+$media-tablet-v-max: 991px;
+$media-tablet-v-min: 992px;
+$media-tablet-h-max: 1023px;
+$media-tablet-h-min: 1024px;
+$media-netbook-max: 1199px;
+$media-netbook-min: 1200px;
+$media-laptop-max: 1399px;
+$media-laptop-min: 1400px;
+$media-desktop-max: 1899px;
+$media-desktop-min: 1900px;
+$media-retina-max: 2559px;
+$media-retina-min: 2560px;
+@mixin media-small-mx {
+  @media screen and (max-width: #{$media-small-max}) {
+    @content;
+  }
+}
+@mixin media-small-mn {
+  @media screen and (min-width: #{$media-small-min}) {
+    @content;
+  }
+}
+@mixin media-phone-mx {
+  @media screen and (max-width: #{$media-phone-max}) {
+    @content;
+  }
+}
+@mixin media-phone-mn {
+  @media screen and (min-width: #{$media-phone-min}) {
+    @content;
+  }
+}
+@mixin media-phablet-mx {
+  @media screen and (max-width: #{$media-phablet-max}) {
+    @content;
+  }
+}
+@mixin media-phablet-mn {
+  @media screen and (min-width: #{$media-phablet-min}) {
+    @content;
+  }
+}
+@mixin media-tablet-v-mx {
+  @media screen and (max-width: #{$media-tablet-v-max}) {
+    @content;
+  }
+}
+@mixin media-tablet-v-mn {
+  @media screen and (min-width: #{$media-tablet-v-min}) {
+    @content;
+  }
+}
+@mixin media-tablet-h-mx {
+  @media screen and (max-width: #{$media-tablet-h-max}) {
+    @content;
+  }
+}
+@mixin media-tablet-h-mn {
+  @media screen and (min-width: #{$media-tablet-h-min}) {
+    @content;
+  }
+}
+@mixin media-netbook-mx {
+  @media screen and (max-width: #{$media-netbook-max}) {
+    @content;
+  }
+}
+@mixin media-netbook-mn {
+  @media screen and (min-width: #{$media-netbook-min}) {
+    @content;
+  }
+}
+@mixin media-laptop-mx {
+  @media screen and (max-width: #{$media-laptop-max}) {
+    @content;
+  }
+}
+@mixin media-laptop-mn {
+  @media screen and (min-width: #{$media-laptop-min}) {
+    @content;
+  }
+}
+@mixin media-desktop-mx {
+  @media screen and (max-width: #{$media-desktop-max}) {
+    @content;
+  }
+}
+@mixin media-desktop-mn {
+  @media screen and (min-width: #{$media-desktop-min}) {
+    @content;
+  }
+}
+@mixin media-retina-mx {
+  @media screen and (max-width: #{$media-retina-max}) {
+    @content;
+  }
+}
+@mixin media-retina-mn {
+  @media screen and (min-width: #{$media-retina-min}) {
+    @content;
+  }
+}
+@mixin media-340-phone {
+  @media screen and (min-width: 340px) and (max-width: #{$media-phone-max}) {
+    @content;
+  }
+}
+@mixin media-phone-phablet {
+  @media screen and (min-width: #{$media-phone-min}) and (max-width: #{$media-phablet-max}) {
+    @content;
+  }
+}
+@mixin media-phone-laptop {
+  @media screen and (min-width: #{$media-phone-min}) and (max-width: #{$media-laptop-max}) {
+    @content;
+  }
+}
+
+/*
+CSS root variables media
+*/
+@include media-netbook-mx {
+  :root {
+    --bdrs: 5px;
+    --sm: 5px;
+    --md: 12px;
+    --lg: 20px;
+    --xl: 35px;
+  }
+}
+@include media-netbook-mn {
+  :root {
+    --bdrs: 10px;
+    --sm: 8px;
+    --md: 15px;
+    --lg: 30px;
+    --xl: 55px;
+  }
+}
+@include media-tablet-v-mx {
+  :root {
+    --font-size-base: 16px;
+  }
+}
+@include media-tablet-v-mn {
+  :root {
+    --font-size-base: 20px;
+  }
+}

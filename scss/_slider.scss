@@ -1,0 +1,304 @@
+.slider-outer.lazy {
+  background-color: #494225;
+  background-image: none;
+}
+.slider-outer {
+  background: url("../img/bg-slider-min.jpg") center no-repeat #494225;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+
+  @include media-phablet-mx {
+    margin-top: 4vh;
+  //  height: 380px;
+  }
+  @include media-phablet-mn {
+    height: 600px;
+  }
+  @include media-laptop-mn {
+    height: 684px;
+  }
+
+  h2 {
+    background-color: $color-blue-dark;
+    line-height: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: var(--md);
+    padding-left: var(--md);
+    transition: all $transition-duration $transition-timing-function;
+
+    @include media-phablet-mx {
+      font-size: 1.875rem;
+      padding-top: 22px;
+      padding-bottom: 42px;
+    }
+    @include media-small-mx {
+      br {
+        display: none;
+      }
+    }
+    @include media-phablet-mn {
+      height: 150px;
+      font-size: 1.95rem;
+    }
+    @include media-laptop-mn {
+      height: 181px;
+      font-size: 2.25rem;
+    }
+  }
+}
+
+.slider {
+  background-color: transparentize($color-blue-dark, 0.75);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+
+  @include media-phablet-mx {
+    //height: 380px;
+    height: 220px;
+  }
+  @include media-phablet-mn {
+    height: 450px;
+    max-width: 646px;
+    overflow: hidden;
+  }
+  @include media-laptop-mn {
+    height: 503px;
+  }
+}
+.slider_wrapper {
+  position: relative;
+  overflow: hidden;
+  //height: 100%;
+}
+.slider_items {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+.transition-none {
+  transition: none;
+}
+.slider_item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+
+    &.bigger {
+      @include media-phablet-mx {
+        span, img {
+          margin-bottom: 2vh;
+        }
+      }
+      @include media-phablet-mn {
+        font-size: 1.3rem;
+      }
+
+      span {
+        display: block;
+        font-family: $font-family-accent;
+        line-height: 1;
+        transition: all $transition-duration $transition-timing-function;
+
+        @include media-phablet-mx {
+          font-size: 5.625rem;
+        }
+        @include media-phablet-mn {
+          font-size: 7rem;
+        }
+        @include media-netbook-mn {
+          font-size: 9rem;
+        }
+      }
+
+      img {
+        @include media-phablet-mx {
+          max-height: 100px;
+        }
+      }
+    }
+
+    &.smaller {
+      @include media-tablet-v-mx {
+        font-size: 0.6rem;
+      }
+      @include media-phablet-mx {
+        display: none;
+      }
+      @include media-phablet-mn {
+        max-width: 388px;
+        width: 90%;
+      }
+      @include media-tablet-v-mn {
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &.slider_item--4 img {
+    max-width: 136px;
+    margin-bottom: 3vh;
+  }
+}
+
+
+.slider_control-outer {
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  left: 0;
+  right: 0;
+
+  @include media-phablet-mx {
+    bottom: -44px;
+    width: 210px;
+  }
+  @include media-phablet-mn {
+    bottom: 71px;
+    width: 280px;
+  }
+}
+.slider_control {
+  border-radius: 50%;
+  transform: translateY(-50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  position: absolute;
+  transition: all $transition-duration $transition-timing-function;
+
+  @include media-phablet-mx {
+    border: 1px solid $color-blue-dark;
+    color: $color-blue-dark;
+    height: 37px;
+    width: 37px;
+  }
+  @include media-phablet-mn {
+    border: 1px solid #fff;
+    color: #fff;
+    height: 60px;
+    width: 60px;
+  }
+
+  &:focus,
+  &:hover {
+    outline: 0;
+    text-decoration: none;
+
+    @include media-phablet-mx {
+      color: $color-blue-dark;
+    }
+    @include media-phablet-mn {
+      color: #fff;
+    }
+  }
+  &:hover {
+
+    @include media-phablet-mx {
+      background-color: transparentize($color-blue-dark, .8);
+    }
+    @include media-phablet-mn {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+.slider_control-show {
+  display: flex;
+}
+.slider_control-prev {
+  left: 0;
+}
+.slider_control-next {
+  right: 0;
+}
+.slider_control::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 20px;
+  margin-left: 2px;
+
+  @include media-phablet-mx {
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTEuNTk2IDEuODUzIDguMzAyIDguMzAzLTguMzAyIDguMzAzIiBzdHJva2U9IiMwNzE3MzMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+") 50% no-repeat;
+  }
+  @include media-phablet-mn {
+    background: url("../img/i-arrow-min.svg") 50% no-repeat;
+  }
+}
+.slider_control-prev::before {
+  transform: rotate(-180deg);
+}
+
+
+.slider_indicators {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0 15%;
+  list-style: none;
+  user-select: none;
+
+  @include media-phablet-mx {
+    bottom: -50px;
+  }
+  @include media-phablet-mn {
+    bottom: 65px;
+  }
+}
+.slider_indicator {
+  border-radius: 50%;
+  cursor: pointer;
+  flex: 0 1 auto;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  background-clip: padding-box;
+
+  @include media-phablet-mx {
+    border: 1px solid $color-blue-dark;
+
+    &:not(.slider_indicator-active):hover {
+      background-color: transparentize($color-blue-dark, .8);
+    }
+  }
+  @include media-phablet-mn {
+    border: 1px solid #fff;
+
+    &:not(.slider_indicator-active):hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+.slider_indicator-active {
+  border: none;
+  width: 12px;
+  height: 12px;
+
+  @include media-phablet-mx {
+    background-color: $color-blue-dark;
+  }
+  @include media-phablet-mn {
+    background-color: #fff;
+  }
+}
