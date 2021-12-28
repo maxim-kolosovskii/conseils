@@ -1,3 +1,4 @@
+// Lazy Loading for background images
 document.addEventListener("DOMContentLoaded", function() {
     var lazyloadImages;
 
@@ -48,9 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
-
-
-
+// Lazy Loading for inline images
 document.addEventListener("DOMContentLoaded", function() {
     var lazyloadImages = document.querySelectorAll("img.lazy-img");
     var lazyloadThrottleTimeout;
