@@ -1,13 +1,11 @@
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
- # Fonts
+ # Variables
  # General layout
  # Header elements
  # Footer elements
- //# Form elements
- //# Buttons
- //# Icons
+ # Buttons
 --------------------------------------------------------------*/
 /*
 CSS root variables media
@@ -138,20 +136,6 @@ img {
 .purple {
   color: #dc4dff; }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 5px; }
-
-::-webkit-scrollbar-track {
-  border-radius: 2px; }
-
-::-webkit-scrollbar-thumb {
-  border-radius: 2px;
-  opacity: .5; }
-
-::-webkit-scrollbar-thumb:hover {
-  opacity: 1; }
-
 /*
 Header elements
 */
@@ -168,7 +152,6 @@ Header elements
     .header {
       padding: 0 3vw; } }
   .header a {
-    /* font-family: $font-family-bold; */
     margin: 0 auto; }
   .header .logo {
     width: 100%;
@@ -184,126 +167,6 @@ Header elements
         max-width: 480px; } }
   .header span {
     display: none; }
-
-/* Desktop menu of header */
-@media screen and (max-width: 991px) {
-  .navigation-desktop {
-    display: none; } }
-.navigation-desktop > ul {
-  display: flex; }
-  .navigation-desktop > ul > li {
-    position: relative; }
-    .navigation-desktop > ul > li > a {
-      letter-spacing: 0.25px;
-      padding: 2vh 1.2vw;
-      transition: all 0.15s ease-in-out;
-      white-space: nowrap; }
-      @media screen and (max-width: 1399px) {
-        .navigation-desktop > ul > li > a {
-          font-size: 1.15rem; } }
-      @media screen and (min-width: 1400px) {
-        .navigation-desktop > ul > li > a {
-          font-size: 1.25rem; } }
-      .navigation-desktop > ul > li > a span {
-        position: relative; }
-        .navigation-desktop > ul > li > a span:after {
-          content: '';
-          height: 1px;
-          opacity: 0;
-          position: absolute;
-          bottom: -5px;
-          left: 0;
-          right: 0;
-          transition: all 0.15s ease-in-out; }
-      .navigation-desktop > ul > li > a:hover {
-        text-decoration: none; }
-        .navigation-desktop > ul > li > a:hover span {
-          position: relative; }
-          .navigation-desktop > ul > li > a:hover span:after {
-            height: 4px;
-            opacity: 1; }
-      .navigation-desktop > ul > li > a.active span:after {
-        height: 4px;
-        opacity: 1; }
-
-/* Mobile hamburger menu of header */
-.hamburger-menu {
-  position: relative; }
-  @media screen and (min-width: 992px) {
-    .hamburger-menu {
-      display: none; } }
-  .hamburger-menu #menu_toggle {
-    opacity: 0;
-    position: absolute; }
-
-.menu_btn {
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  display: block;
-  width: 30px;
-  height: 30px;
-  padding: 10px; }
-  .menu_btn span, .menu_btn span:before, .menu_btn span:after {
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    left: 0;
-    right: 0;
-    margin: 0 auto; }
-  .menu_btn span {
-    top: 23px; }
-    .menu_btn span:before {
-      content: '';
-      top: -10px; }
-    .menu_btn span:after {
-      content: '';
-      top: 10px; }
-  .menu_btn:hover span, .menu_btn:hover span:before, .menu_btn:hover span:after {
-    transition-duration: 0.3s; }
-
-.menu_box {
-  box-sizing: border-box;
-  height: 100vh;
-  width: 100vw;
-  overflow-y: auto;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  z-index: 1;
-  visibility: hidden;
-  transition-duration: 0.3s; }
-  .menu_box .menu {
-    padding: 11vh 0 5vh; }
-    .menu_box .menu > .menu-item > a {
-      color: #fff;
-      display: block;
-      font-size: 1.25rem;
-      padding: 1.7vh var(--lg); }
-    .menu_box .menu > .menu-item:not(:last-child) {
-      position: relative; }
-      .menu_box .menu > .menu-item:not(:last-child):after {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        content: '';
-        position: absolute;
-        right: var(--lg);
-        left: var(--lg); }
-
-#menu_toggle:checked ~ .menu_btn span {
-  transform: rotate(45deg); }
-  #menu_toggle:checked ~ .menu_btn span:before {
-    top: 0;
-    transform: rotate(0); }
-  #menu_toggle:checked ~ .menu_btn span:after {
-    top: 0;
-    transform: rotate(90deg); }
-#menu_toggle:checked ~ .menu_btn span,
-#menu_toggle:checked ~ .menu_btn span:before,
-#menu_toggle:checked ~ .menu_btn span:after {
-  background-color: #fff; }
-#menu_toggle:checked ~ .menu_box {
-  visibility: visible;
-  right: 0; }
 
 /*
 Footer elements
@@ -324,7 +187,9 @@ Footer elements
     max-width: 300px;
     width: 100%; }
 
-/* Buttons */
+/*
+Buttons
+*/
 .section .btn,
 .section button {
   background-color: #2ca0ff;
