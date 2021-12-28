@@ -311,7 +311,7 @@ General Landing styles
         top: 29%; } }
     @media screen and (max-width: 991px) and (orientation: landscape) {
       .section--top .popup-video {
-        top: 30vh; } }
+        top: 36vh; } }
     @media screen and (min-width: 992px) {
       .section--top .popup-video {
         height: 100px;
