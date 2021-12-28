@@ -378,8 +378,11 @@ General Landing styles
     right: 0;
     left: 0;
     z-index: 1;
+    opacity: 0;
+    animation: scaleOut .5s $transition-timing-function;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
     transition: background-color $transition-duration $transition-timing-function;
-    //display: none;
 
     @include media-tablet-v-mx {
       height: 66px;
@@ -423,6 +426,16 @@ General Landing styles
         border-bottom: 10px solid transparent;
       }
     }
+  }
+  @-webkit-keyframes scaleOut {
+    0% { opacity: 0; transform: scale(0.1); }
+    70% { transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes scaleOut {
+    0% { opacity: 0; transform: scale(0.1); }
+    70% { transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
   }
 }
 
