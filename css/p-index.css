@@ -309,6 +309,9 @@ General Landing styles
         height: 66px;
         width: 66px;
         top: 29%; } }
+    @media screen and (max-width: 991px) and (orientation: landscape) {
+      .section--top .popup-video {
+        top: 30vh; } }
     @media screen and (min-width: 992px) {
       .section--top .popup-video {
         height: 100px;
@@ -469,6 +472,28 @@ General Landing styles
       .section--video .playing + .controls .btnpause:after {
         height: 40px;
         width: 40px; } }
+  .section--video .btnfull {
+    background: url("../img/i-fullscreen-min.svg") 50% no-repeat;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    right: 10px;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease-in-out; }
+    .section--video .btnfull:hover {
+      border: 1px solid #fff !important; }
+    @media screen and (max-width: 991px) {
+      .section--video .btnfull {
+        bottom: 11px; } }
+    @media screen and (min-width: 992px) {
+      .section--video .btnfull {
+        bottom: 25px; } }
+  .section--video:hover .btnfull {
+    opacity: 1; }
+  .section--video .fullscreen ~ .controls .btnfull {
+    display: none; }
 
 /* Comment section */
 .section--comment {

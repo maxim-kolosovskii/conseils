@@ -345,6 +345,9 @@ General Landing styles
       width: 66px;
       top: 29%;
     }
+    @include media-tablet-v-mx-land {
+      top: 30vh;
+    }
     @include media-tablet-v-mn {
       height: 100px;
       width: 100px;
@@ -541,36 +544,36 @@ General Landing styles
     }
   }
 
-  //.btnfull {
-  //  background: url("../img/i-fullscreen-min.svg") 50% no-repeat;
-  //  border: 1px solid rgba(255,255,255,.5);
-  //  border-radius: 50%;
-  //  height: 40px;
-  //  width: 40px;
-  //  right: 10px;
-  //  z-index: 3;
-  //  opacity: 0;
-  //  transition: all $transition-duration $transition-timing-function;
-  //
-  //  &:hover {
-  //    border: 1px solid #fff !important;
-  //  }
-  //
-  //  @include media-tablet-v-mx {
-  //    bottom: 11px;
-  //  }
-  //  @include media-tablet-v-mn {
-  //    bottom: 25px;
-  //  }
-  //}
-  //&:hover {
-  //  .btnfull {
-  //    opacity: 1;
-  //  }
-  //}
-  //.fullscreen ~ .controls .btnfull {
-  //  display: none;
-  //}
+  .btnfull {
+    background: url("../img/i-fullscreen-min.svg") 50% no-repeat;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    right: 10px;
+    z-index: 3;
+    opacity: 0;
+    transition: all $transition-duration $transition-timing-function;
+
+    &:hover {
+      border: 1px solid #fff !important;
+    }
+
+    @include media-tablet-v-mx {
+      bottom: 11px;
+    }
+    @include media-tablet-v-mn {
+      bottom: 25px;
+    }
+  }
+  &:hover {
+    .btnfull {
+      opacity: 1;
+    }
+  }
+  .fullscreen ~ .controls .btnfull {
+    display: none;
+  }
 }
 
 

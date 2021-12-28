@@ -77,6 +77,11 @@ $media-retina-min: 2560px;
     @content;
   }
 }
+@mixin media-tablet-v-mx-land {
+  @media screen and (max-width: #{$media-tablet-v-max}) and (orientation : landscape) {
+    @content;
+  }
+}
 @mixin media-tablet-v-mn {
   @media screen and (min-width: #{$media-tablet-v-min}) {
     @content;

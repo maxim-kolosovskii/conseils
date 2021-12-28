@@ -40,7 +40,7 @@ function theEnd(){
     // console.log("The End.")
     videoManagement.classList.remove("management-on");
 }
-// q('#btnFull')[on]('click', fullscreen)
+q('#btnFull')[on]('click', fullscreen)
 q('#btnPlay')[on]('click', onPlay)
 q('#btnClose')[on]('click', onClose)
 q('#btnPause')[on]('click', ()=> {
