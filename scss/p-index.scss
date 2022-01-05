@@ -401,7 +401,7 @@ General Landing styles
 
 /* Video section */
 .management-on {
-  overflow: hidden;
+  //overflow: hidden;
 
   .section--video {
     display: flex;
@@ -409,7 +409,8 @@ General Landing styles
 }
 .section--video {
   background-color: $color-black;
-  position: fixed;
+  //position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -419,6 +420,7 @@ General Landing styles
 
   video {
     margin: auto;
+    max-height: 100vh;
     max-width: 100%;
   }
 

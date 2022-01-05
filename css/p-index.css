@@ -361,14 +361,12 @@ General Landing styles
     opacity: 1;
     transform: scale(1); } }
 /* Video section */
-.management-on {
-  overflow: hidden; }
-  .management-on .section--video {
-    display: flex; }
+.management-on .section--video {
+  display: flex; }
 
 .section--video {
   background-color: #000;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -377,6 +375,7 @@ General Landing styles
   display: none; }
   .section--video video {
     margin: auto;
+    max-height: 100vh;
     max-width: 100%; }
   .section--video .controls button {
     background-color: transparent;
