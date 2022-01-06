@@ -39,12 +39,16 @@ General Landing styles
   background-image: none; }
 
 .section--top {
-  background: url("../img/bg-top-min.jpg") #614f49 50% no-repeat;
-  background-size: cover;
   display: flex;
   transition: all 0.15s ease-in-out; }
+  @media screen and (max-width: 767px) {
+    .section--top {
+      background: url("../img/bg-top-m-min.jpg") #614f49 50% no-repeat;
+      background-size: cover; } }
   @media screen and (min-width: 768px) {
     .section--top {
+      background: url("../img/bg-top-min.jpg") #614f49 50% no-repeat;
+      background-size: cover;
       min-height: 70vh; } }
   @media screen and (min-width: 1200px) {
     .section--top {
@@ -813,8 +817,6 @@ General Landing styles
   background-image: none; }
 
 .section--ebay {
-  background: url("../img/bg-ebay-min.jpg") #131c2b 50% no-repeat;
-  background-size: cover;
   color: #fff;
   position: relative;
   text-align: center;
@@ -828,9 +830,13 @@ General Landing styles
   */ }
   @media screen and (max-width: 767px) {
     .section--ebay {
+      background: url("../img/bg-ebay-m-min.jpg") #131c2b 50% no-repeat;
+      background-size: cover;
       padding: 6vh 0 6vh; } }
   @media screen and (min-width: 768px) {
     .section--ebay {
+      background: url("../img/bg-ebay-min.jpg") #131c2b 50% no-repeat;
+      background-size: cover;
       padding: 12vh 0 6vh; } }
   .section--ebay h1 {
     margin: auto;

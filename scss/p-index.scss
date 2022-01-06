@@ -25,14 +25,18 @@ General Landing styles
   background-image: none;
 }
 .section--top {
-  background: url("../img/bg-top-min.jpg") #614f49 50% no-repeat;
-  background-size: cover;
-  //background-size: contain;
   display: flex;
   transition: all $transition-duration-fast $transition-timing-function;
   //display: none;
 
+  @include media-phablet-mx {
+    background: url("../img/bg-top-m-min.jpg") #614f49 50% no-repeat;
+    background-size: cover;
+  }
+
   @include media-phablet-mn {
+    background: url("../img/bg-top-min.jpg") #614f49 50% no-repeat;
+    background-size: cover;
     min-height: 70vh;
   }
   @include media-netbook-mn {
@@ -849,8 +853,6 @@ General Landing styles
   background-image: none;
 }
 .section--ebay {
-  background: url("../img/bg-ebay-min.jpg") #131c2b 50% no-repeat;
-  background-size: cover;
   color: #fff;
   position: relative;
   text-align: center;
@@ -858,9 +860,13 @@ General Landing styles
   //display: none;
 
   @include media-phablet-mx {
+    background: url("../img/bg-ebay-m-min.jpg") #131c2b 50% no-repeat;
+    background-size: cover;
     padding: 6vh 0 6vh;
   }
   @include media-phablet-mn {
+    background: url("../img/bg-ebay-min.jpg") #131c2b 50% no-repeat;
+    background-size: cover;
     padding: 12vh 0 6vh;
   }
 
