@@ -403,25 +403,45 @@ General Landing styles
 .management-on {
   //overflow: hidden;
 
+  .header,
+  .section--top {
+    display: none;
+  }
+
   .section--video {
     display: flex;
+    justify-content: center;
+  }
+
+  .section--comment {
+    padding: 6vh 0;
   }
 }
 .section--video {
   background-color: $color-black;
+  overflow: hidden;
   //position: fixed;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  //position: absolute;
+  //top: 0;
+  //right: 0;
+  //bottom: 0;
+  //left: 0;
   z-index: 1;
   display: none;
 
   video {
     margin: auto;
-    max-height: 100vh;
+    //max-height: 100vh;
+    //min-height: 100vh;
     max-width: 100%;
+    //min-width: 100%;
+
+    @include media-phablet-mn {
+      //min-height: 70vh;
+    }
+    @include media-netbook-mn {
+      min-height: 90vh;
+    }
   }
 
   .controls {
@@ -438,24 +458,24 @@ General Landing styles
       display: none;
     }
 
-    .btnclose {
-      background: url("../img/i-close-min.svg") 50% no-repeat;
-      background-color: transparentize($color-black,.9);
-      background-size: 50%;
-      border: 1px solid rgba(255,255,255,.3);
-      border-radius: 50%;
-      height: 40px;
-      width: 40px;
-      top: 10px;
-      right: 10px;
-      z-index: 3;
-      transition: all $transition-duration $transition-timing-function;
-
-      &:hover {
-        background-color: transparentize($color-black,.7);
-        border: 1px solid #fff !important;
-      }
-    }
+    //.btnclose {
+    //  background: url("../img/i-close-min.svg") 50% no-repeat;
+    //  background-color: transparentize($color-black,.9);
+    //  background-size: 50%;
+    //  border: 1px solid rgba(255,255,255,.3);
+    //  border-radius: 50%;
+    //  height: 40px;
+    //  width: 40px;
+    //  top: 10px;
+    //  right: 10px;
+    //  z-index: 3;
+    //  transition: all $transition-duration $transition-timing-function;
+    //
+    //  &:hover {
+    //    background-color: transparentize($color-black,.7);
+    //    border: 1px solid #fff !important;
+    //  }
+    //}
 
     .btnpause {
       border-radius: 0;
@@ -466,116 +486,116 @@ General Landing styles
       left: 0;
       z-index: 1;
       width: 100%;
-
-      &:before {
-        content: '';
-        background-color: transparentize($color-blue-light, 0.9);
-        border-radius: 50%;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity $transition-duration $transition-timing-function;
-
-        @include media-tablet-v-mx {
-          height: 66px;
-          width: 66px;
-        }
-        @include media-tablet-v-mn {
-          height: 100px;
-          width: 100px;
-        }
-        @include media-netbook-mn {
-          height: 136px;
-          width: 136px;
-        }
-      }
-      &:after {
-        content: '';
-        margin: auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 10px;
-        width: 0;
-        height: 0;
-        opacity: 0;
-        transition: opacity $transition-duration $transition-timing-function;
-
-        @include media-tablet-v-mx {
-          border-top: 10px solid transparent;
-          border-left: 20px solid #fff;
-          border-bottom: 10px solid transparent;
-        }
-        @include media-tablet-v-mn {
-          border-top: 20px solid transparent;
-          border-left: 40px solid #fff;
-          border-bottom: 20px solid transparent;
-        }
-      }
-
-      &:hover {
-        &:before {
-          opacity: 1;
-        }
-        &:after {
-          opacity: .3;
-        }
-      }
+    //
+    //  &:before {
+    //    content: '';
+    //    background-color: transparentize($color-blue-light, 0.9);
+    //    border-radius: 50%;
+    //    margin: auto;
+    //    position: absolute;
+    //    top: 0;
+    //    right: 0;
+    //    bottom: 0;
+    //    left: 0;
+    //    opacity: 0;
+    //    transition: opacity $transition-duration $transition-timing-function;
+    //
+    //    @include media-tablet-v-mx {
+    //      height: 66px;
+    //      width: 66px;
+    //    }
+    //    @include media-tablet-v-mn {
+    //      height: 100px;
+    //      width: 100px;
+    //    }
+    //    @include media-netbook-mn {
+    //      height: 136px;
+    //      width: 136px;
+    //    }
+    //  }
+    //  &:after {
+    //    content: '';
+    //    margin: auto;
+    //    position: absolute;
+    //    top: 0;
+    //    right: 0;
+    //    bottom: 0;
+    //    left: 10px;
+    //    width: 0;
+    //    height: 0;
+    //    opacity: 0;
+    //    transition: opacity $transition-duration $transition-timing-function;
+    //
+    //    @include media-tablet-v-mx {
+    //      border-top: 10px solid transparent;
+    //      border-left: 20px solid #fff;
+    //      border-bottom: 10px solid transparent;
+    //    }
+    //    @include media-tablet-v-mn {
+    //      border-top: 20px solid transparent;
+    //      border-left: 40px solid #fff;
+    //      border-bottom: 20px solid transparent;
+    //    }
+    //  }
+    //
+    //  &:hover {
+    //    &:before {
+    //      opacity: 1;
+    //    }
+    //    &:after {
+    //      opacity: .3;
+    //    }
+    //  }
     }
   }
 
-  .playing + .controls .btnpause {
-    &:after {
-      border: 0 none;
-      background: url("../img/i-pause-min.svg") 50% no-repeat;
-      left: 0;
+  //.playing + .controls .btnpause {
+  //  &:after {
+  //    border: 0 none;
+  //    background: url("../img/i-pause-min.svg") 50% no-repeat;
+  //    left: 0;
+  //
+  //    @include media-phablet-mx {
+  //      height: 20px;
+  //      width: 20px;
+  //    }
+  //    @include media-phablet-mn {
+  //      height: 40px;
+  //      width: 40px;
+  //    }
+  //  }
+  //}
 
-      @include media-phablet-mx {
-        height: 20px;
-        width: 20px;
-      }
-      @include media-phablet-mn {
-        height: 40px;
-        width: 40px;
-      }
-    }
-  }
-
-  .btnfull {
-    background: url("../img/i-fullscreen-min.svg") 50% no-repeat;
-    border: 1px solid rgba(255,255,255,.5);
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    right: 10px;
-    z-index: 3;
-    opacity: 0;
-    transition: all $transition-duration $transition-timing-function;
-
-    &:hover {
-      border: 1px solid #fff !important;
-    }
-
-    @include media-tablet-v-mx {
-      bottom: 11px;
-    }
-    @include media-tablet-v-mn {
-      bottom: 25px;
-    }
-  }
-  &:hover {
-    .btnfull {
-      opacity: 1;
-    }
-  }
-  .fullscreen ~ .controls .btnfull {
-    display: none;
-  }
+  //.btnfull {
+  //  background: url("../img/i-fullscreen-min.svg") 50% no-repeat;
+  //  border: 1px solid rgba(255,255,255,.5);
+  //  border-radius: 50%;
+  //  height: 40px;
+  //  width: 40px;
+  //  right: 10px;
+  //  z-index: 3;
+  //  opacity: 0;
+  //  transition: all $transition-duration $transition-timing-function;
+  //
+  //  &:hover {
+  //    border: 1px solid #fff !important;
+  //  }
+  //
+  //  @include media-tablet-v-mx {
+  //    bottom: 11px;
+  //  }
+  //  @include media-tablet-v-mn {
+  //    bottom: 25px;
+  //  }
+  //}
+  //&:hover {
+  //  .btnfull {
+  //    opacity: 1;
+  //  }
+  //}
+  //.fullscreen ~ .controls .btnfull {
+  //  display: none;
+  //}
 }
 
 
