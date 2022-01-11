@@ -27,15 +27,20 @@ General Landing styles
 .section--top {
   display: flex;
   transition: all $transition-duration-fast $transition-timing-function;
+  top: 0;
   //display: none;
 
   @include media-phablet-mx {
     background: url("../img/bg-top-m-min.jpg") #614f49 50% no-repeat;
+    background-attachment: fixed;
     background-size: cover;
   }
-
+  @include media-phone-mx {
+    background-attachment: scroll;
+  }
   @include media-phablet-mn {
     background: url("../img/bg-top-min.jpg") #614f49 50% no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     min-height: 70vh;
   }

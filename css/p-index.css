@@ -40,14 +40,20 @@ General Landing styles
 
 .section--top {
   display: flex;
-  transition: all 0.15s ease-in-out; }
+  transition: all 0.15s ease-in-out;
+  top: 0; }
   @media screen and (max-width: 767px) {
     .section--top {
       background: url("../img/bg-top-m-min.jpg") #614f49 50% no-repeat;
+      background-attachment: fixed;
       background-size: cover; } }
+  @media screen and (max-width: 575px) {
+    .section--top {
+      background-attachment: scroll; } }
   @media screen and (min-width: 768px) {
     .section--top {
       background: url("../img/bg-top-min.jpg") #614f49 50% no-repeat;
+      background-attachment: fixed;
       background-size: cover;
       min-height: 70vh; } }
   @media screen and (min-width: 1200px) {
