@@ -34,14 +34,13 @@ General Landing styles
     list-style: none; }
 
 /* Top section */
-.section--top.lazy {
-  background-color: #614f49;
-  background-image: none; }
-
 .section--top {
   display: flex;
   transition: all 0.15s ease-in-out;
   top: 0; }
+  .section--top.lazy {
+    background-color: #614f49;
+    background-image: none; }
   @media screen and (max-width: 767px) {
     .section--top {
       background: url("../img/bg-top-m-min.jpg") #614f49 50% no-repeat;
@@ -818,10 +817,6 @@ General Landing styles
         background-color: #fff; } }
 
 /* Ebay section */
-.section--ebay.lazy {
-  background-color: #131c2b;
-  background-image: none; }
-
 .section--ebay {
   color: #fff;
   position: relative;
@@ -834,6 +829,9 @@ General Landing styles
   * Copyright 2018-2021 Alexander Maltsev
   * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
   */ }
+  .section--ebay.lazy {
+    background-color: #131c2b;
+    background-image: none; }
   @media screen and (max-width: 767px) {
     .section--ebay {
       background: url("../img/bg-ebay-m-min.jpg") #131c2b 50% no-repeat;

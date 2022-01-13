@@ -20,15 +20,16 @@ General Landing styles
 
 
 /* Top section */
-.section--top.lazy {
-  background-color: #614f49;
-  background-image: none;
-}
 .section--top {
   display: flex;
   transition: all $transition-duration-fast $transition-timing-function;
   top: 0;
   //display: none;
+
+  &.lazy {
+    background-color: #614f49;
+    background-image: none;
+  }
 
   @include media-phablet-mx {
     background: url("../img/bg-top-m-min.jpg") #614f49 50% no-repeat;
@@ -853,16 +854,17 @@ General Landing styles
 
 
 /* Ebay section */
-.section--ebay.lazy {
-  background-color: #131c2b;
-  background-image: none;
-}
 .section--ebay {
   color: #fff;
   position: relative;
   text-align: center;
   transition: all $transition-duration $transition-timing-function;
   //display: none;
+
+  &.lazy {
+    background-color: #131c2b;
+    background-image: none;
+  }
 
   @include media-phablet-mx {
     background: url("../img/bg-ebay-m-min.jpg") #131c2b 50% no-repeat;
