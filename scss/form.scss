@@ -1,0 +1,120 @@
+/*
+Form elements
+*/
+
+fieldset {
+  border: 0;
+  float: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: auto; left: auto;
+  width: 100%;
+}
+
+.form__group-reverse {
+  flex-direction: column-reverse;
+}
+
+.form__group-half-outer {
+  @include media-phone-mx {
+    display: inline-block;
+  }
+  @include media-phablet-netbook {
+    display: inline-block;
+  }
+}
+
+.form__group-half {
+  display: flex;
+
+  @include media-phone-phablet {
+    width: calc(50% - 3px);
+  }
+  @include media-netbook-mn {
+    width: calc(50% - 3px);
+  }
+}
+
+.form__group-select {
+
+  .form__control {
+    background: url("../img/i-arrow-min.svg") 95% 50% no-repeat;
+  }
+}
+
+.form__label {
+  font-family: $font-family-accent;
+  font-size: 0.875rem; //14px
+  font-weight: $font-weight-base;
+  padding-left: 1rem;
+  transform: translateY(2.2rem);
+  transform-origin: left top;
+  cursor: text;
+  transition: all $transition-duration-fast $transition-timing-function;
+}
+
+.form__group input,
+.form__control,
+textarea {
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: var(--bdrs);
+  box-sizing: border-box;
+  color: #2d2d2d;
+  display: block;
+  font-family: $font-family-accent;
+  font-size: 0.875rem; //14px
+  font-weight: $font-weight-medium;
+  outline: none;
+  padding: 1.55rem 1rem .45rem;
+  width: 100%;
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:focus {
+    color: $color-black;
+  }
+}
+
+.form__control:focus ~ .form__label,
+.form__control:not(:placeholder-shown) ~ .form__label {
+  color: #8e8e8e;
+  padding-left: 1.5rem;
+  transform: translateY(1.6rem) scale(0.7);
+}
+
+/* Checkbox */
+.form__checkbox {
+  display: flex;
+  align-items: start;
+  margin: 9px 0 0;
+}
+
+input[type="checkbox"] {
+  max-width: 20px;
+  margin: 0 10px 0 0;
+}
+
+.form__checkbox span {
+  color: #668496;
+  font-size: 0.598rem; //9.57px
+}
+
+.form__checkbox a {
+  color: $color-blue;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* Select */
+@import "select";
