@@ -5,7 +5,6 @@
  # General layout
  # Header elements
  # Footer elements
- # Form elements
  # Buttons
 --------------------------------------------------------------*/
 
@@ -13,5 +12,6 @@
 @import 'layout';
 @import 'header';
 @import 'footer';
-@import 'form';
+//@import 'form';
 @import 'buttons';
+//@import 'icon';

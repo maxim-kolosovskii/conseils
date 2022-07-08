@@ -4,24 +4,24 @@
 $transition-duration: 0.3s;
 $transition-duration-fast: 0.15s;
 $transition-duration-slow: 0.6s;
-$transition-timing-function: cubic-bezier(0.25, 0.45, 0.45, 0.95);
+$transition-timing-function: ease-in-out;
 
 // CSS colors
-$color-blue-dark: #233b68;
-$color-blue: #129ff7;
-$color-blue-light: #daf0ff;
-$color-grey-light: #f6f7fa;
-$color-grey: #f1f1f1;
+$color-purple: #dc4dff;
+$color-blue: #103a77;
+$color-blue-dark: #071733;
+$color-blue-light: #2ca0ff;
+$color-grey-light: #f2f2f2;
+$color-grey: #384048;
 $color-black: #000;
 
 // CSS typography
-$font-family-base: 'Roboto', sans-serif;
-$font-family-accent: 'Montserrat', sans-serif;
-$font-weight-light: 300;
+$font-family-base: 'Cabin', 'Roboto', sans-serif;
+$font-family-base-cond: 'Cabin Condensed', 'Roboto', sans-serif;
+$font-family-accent: 'DM Serif Display', 'Times New Roman', serif;
 $font-weight-base: 400;
-$font-weight-medium: 500;
 $font-weight-bolder: 700;
-$font-color-base: $color-black;
+$font-color-base: $color-grey;
 
 // CSS media queries grid
 $media-small-max: 374px;
@@ -152,38 +152,13 @@ $media-retina-min: 2560px;
     @content;
   }
 }
-@mixin media-phone-tablet-v {
-  @media screen and (min-width: #{$media-phone-min}) and (max-width: #{$media-tablet-v-max}) {
-    @content;
-  }
-}
-@mixin media-phablet-tablet-v {
-  @media screen and (min-width: #{$media-phablet-min}) and (max-width: #{$media-tablet-v-max}) {
-    @content;
-  }
-}
-@mixin media-phablet-tablet-h {
-  @media screen and (min-width: #{$media-phablet-min}) and (max-width: #{$media-tablet-h-max}) {
-    @content;
-  }
-}
-@mixin media-phablet-netbook {
-  @media screen and (min-width: #{$media-phablet-min}) and (max-width: #{$media-netbook-max}) {
-    @content;
-  }
-}
-@mixin media-phablet-laptop {
-  @media screen and (min-width: #{$media-phablet-min}) and (max-width: #{$media-laptop-max}) {
-    @content;
-  }
-}
 
 /*
 CSS root variables media
 */
 @include media-netbook-mx {
   :root {
-    --bdrs: 3px;
+    --bdrs: 5px;
     --sm: 5px;
     --md: 12px;
     --lg: 20px;
@@ -192,7 +167,7 @@ CSS root variables media
 }
 @include media-netbook-mn {
   :root {
-    --bdrs: 5px;
+    --bdrs: 10px;
     --sm: 8px;
     --md: 15px;
     --lg: 30px;
@@ -206,6 +181,6 @@ CSS root variables media
 }
 @include media-tablet-v-mn {
   :root {
-    --font-size-base: 16px;
+    --font-size-base: 20px;
   }
 }

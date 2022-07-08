@@ -3,140 +3,21 @@ Footer elements
 */
 
 .footer {
-  background: rgb(33,71,99);
-  background: -webkit-linear-gradient(90deg, rgba(33,71,99,1) 0%, rgba(33,70,100,1) 100%);
-  background: linear-gradient(90deg, rgba(33,71,99,1) 0%, rgba(33,70,100,1) 100%);
+  background-color: $color-blue-dark;
   color: #fff;
-
-  .header {
-    @extend .header;
-    background-color: #0F2B41;
-  }
-
-  .content-box {
-    padding: 4vh 0 3vh;
-    display: grid;
-    gap: 25px;
-    transition: all $transition-duration $transition-timing-function;
-
-    @media only screen and (max-width: 470px) {
-      grid-template-columns: 1fr;
-    }
-    @media only screen and (min-width: 471px) {
-      grid-template-columns: 1fr 1fr;
-    }
-    @include media-phablet-mn {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    @include media-tablet-v-mn {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    @media only screen and (min-width: 1144px) {
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-  }
-}
-
-.footer__col {
-  width: 100%;
-  @include media-tablet-v-mn { max-width: 210px; }
-
-  .footer__title {
-    background-repeat: no-repeat;
-    background-position: 0 50%;
-    border-bottom: 1px solid #fff;
-    font-weight: $font-weight-medium;
-    text-transform: uppercase;
-    white-space: nowrap;
-    transition: all $transition-duration $transition-timing-function;
-
-    @include media-phablet-mx {
-      font-size: 1rem;
-      padding: 10px 0 10px 30px;
-    }
-    @include media-phablet-mn {
-      font-size: 1.25rem;
-      padding: 15px 0 15px 30px;
-    }
-  }
-  .nav {
-    padding: 15px 0;
-  }
-  .nav__link {
-    color: #fff;
-    display: block;
-    font-weight: $font-weight-medium;
-    padding: .8vh 0;
-    line-height: 1.4;
-  }
-  .nav__link--blue {
-    color: $color-blue;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  a:hover {
-    color: $color-blue;
-  }
-}
-.footer__col--client .footer__title {
-  background-image: url("../img/i-client-min.svg");
-}
-.footer__col--info .footer__title {
-  background-image: url("../img/i-info-min.svg");
-}
-.footer__col--suivez .footer__title {
-  background-image: url("../img/i-suivez-min.svg");
-}
-.footer__col--contactez .footer__title {
-  background-image: url("../img/i-contactez-min.svg");
-}
-.footer__col--application .footer__title {
-  background-image: url("../img/i-application-min.svg");
-}
-
-.footer__nav-bottom {
-  border-top: 1px solid $color-blue-dark;
-  border-bottom: 1px solid $color-blue-dark;
-  margin: 0 0 4vh;
-  padding: 12px 0 15px;
-
-  .nav {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 850px;
-  }
-
-  .nav__link {
-    color: #fff;
-    font-size: 0.813rem; //13px
-    font-weight: $font-weight-medium;
-    padding: 5px;
-    text-align: center;
-
-    @include media-phone-mx {
-      flex-grow: 1;
-    }
-
-    &:hover {
-      color: $color-blue;
-    }
-  }
-}
-
-.footer__copy {
-  font-size: 0.625rem; // 10px
-  opacity: .85;
+  font-size: 0.8rem;
   text-align: center;
+  transition: all $transition-duration $transition-timing-function;
 
-  @include media-phablet-mx {
-    padding-bottom: 3vh;
+  @include media-tablet-v-mx {
+    padding: 4vh var(--md) 0;
   }
-  @include media-phablet-mn {
-    padding-bottom: 6vh;
+  @include media-tablet-v-mn {
+    padding: 4vh var(--md) 2vh;
+  }
+
+  .logo {
+    max-width: 300px;
+    width: 100%;
   }
 }
